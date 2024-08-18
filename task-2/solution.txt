@@ -4,12 +4,12 @@ git clone https://github.com/Malak-Rashad/OSC-Task.git
 cd OSC-Task
 mkdir task-2
 cd task-2
-toush greeting.txt
+touch greeting.txt
 echo "Hello World" >> greeting.txt
 git add greeting.txt
 git commit -m "Added greeting"
 git checkout -b intro
-echo "I Love Git" >> gretting.txt
+echo "I Love Git" >> greeting.txt
 git add greeting.txt
 git commit -m "Added I Love Git"
 git checkout main
