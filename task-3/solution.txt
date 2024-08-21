@@ -8,7 +8,7 @@ nano ~/project_files/logs/system.log
 nano ~/project_files/data/data.csv
 tar -cvf  ~/project_files/logs/logs_backup.tar -c ~/project_files/logs/  
 mv ~/project_files/logs/logs_backup.tar ~/project_files/
-tar -xvf ~/project_files/logs_backup.tar
+tar -xvf ~/project_files/logs_backup.tar -C ~/project_files/logs
 find ~ -name "*.md"
 find ~/project_files/ -name "*.log"
 find ~/project_files/ -name "file1.pdf"
