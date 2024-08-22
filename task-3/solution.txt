@@ -6,9 +6,11 @@ touch ~/project_files/data/data.csv ~/project_files/data/info.txt
 nano ~/project_files/reports/report1.md
 nano ~/project_files/logs/system.log
 nano ~/project_files/data/data.csv
-tar -cvf  ~/project_files/logs/logs_backup.tar -c ~/project_files/logs/  
+cd project_files/
+tar -cvf logs_backup.tar logs/ 
 mv ~/project_files/logs/logs_backup.tar ~/project_files/
-tar -xvf ~/project_files/logs_backup.tar -C ~/project_files/logs
+cd logs
+tar -xvf ../logs_backup.tar
 find ~ -name "*.md"
 find ~/project_files/ -name "*.log"
 find ~/project_files/ -name "file1.pdf"
@@ -21,7 +23,7 @@ rm project_files/link_data.cvs
 echo "Summary Start"> ~/project_files/summary.txt
 date >> ~/project_files/summary.txt
 wc -l < ~/project_files/summary.txt | tee -a  ~/project_files/summary.txt 
-ls project_files/reports/report1.md | wc -w 
+wc -w < project_files/reports/report1.md
 wc -m < ~/project_files/logs/system.log |tee -a ~/project_files/summary.txt
 find ~/project_files/ -type f -or -type d | wc -l >> ~/project_files/summary.txt
 cat project_files/summary.txt
