@@ -7,10 +7,10 @@ nano ~/project_files/reports/report1.md
 nano ~/project_files/logs/system.log
 nano ~/project_files/data/data.csv
 cd project_files/
-tar -cvf archive.tar logs/system.log logs/error.log logs/file1.pdf logs/file2.pdf  
+tar -cvf logs_backup.tar logs/system.log logs/error.log logs/file1.pdf logs/file2.pdf   
 mv ~/project_files/logs/logs_backup.tar ~/project_files/
 cd logs
-tar -xvf project_files/archive.tar -C project_files/logs
+tar -xvf project_files/logs_backup.tar -C project_files/logs
 find ~ -name "*.md"
 find ~/project_files/ -name "*.log"
 find ~/project_files/ -name "file1.pdf"
